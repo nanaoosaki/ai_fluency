@@ -271,3 +271,4 @@ Open `index.html` directly, or run the local server:
 *   `imgs/`: Local asset inputs such as `style_matrix_0.jpg`, logos, screenshots, or QR codes.
 *   `generated_slides/`: The render targets.
 *   `index.html`: The viewer.
+*   `PRESENTATION_SETUP.md`: How to present the deck with private speaker notes.
