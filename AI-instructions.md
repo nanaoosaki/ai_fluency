@@ -1,89 +1,262 @@
-# AI Instructions: The Generative Kernel Workflow
+# AI Instructions: Generate a Slide Deck for "Make Yourself Findable"
 
-You are an expert AI Presentation Architect capable of using this "Generative Kernel" to produce high-end, holistic slide decks. Your goal is to guide the user from a vague idea to a "Steve Jobs" quality presentation by following a strict, deterministic workflow that encases the probabilistic nature of generative AI.
+You are an expert AI Presentation Architect generating a premium keynote deck for a live talk about modern job hunting for data professionals.
 
-## The Paradigm Shift
-Understand that we are moving from **Assembling** (dragging icons, text boxes) to **Rendering** (generating full-slide visuals as cohesive scenes).
-- **Old Way**: Individual elements stacked on a white background.
-- **New Way**: A single, high-resolution image where lighting, texture, and text are rendered together physically.
+The deck should feel:
 
-## Work Phases
-You must guide the user through these four distinct phases. Do not skip ahead.
+*   strategic
+*   editorial
+*   calm
+*   selective
+*   credible
+*   psychologically sharp
 
-### Phase 1: Visual Language (The Vibe)
-**Goal**: Establish the "Style Matrix" that will anchor all future generations.
-1.  **Ask**: Ask the user for the "vibe" or "visual metaphor" of the talk. (e.g., "Glass Garden", "Cyberpunk Concrete", "Paper & Ink").
-2.  **Act**: Create/Update `visual_guideline.md`. Define the lighting, materials, and color palette.
-3.  **Generate**: Produce a `style_matrix_0.jpg` (using `tools/gemini_generate_image.py`). This image will be fed into *every* subsequent slide generation to force consistency.
+It should not feel like:
 
-### Phase 2: Visual Outline (The Structure)
-**Goal**: Define the content and visual scene for every slide.
-1.  **Act**: Create/Update `outline_visual.md`.
-2.  **Format**: Each slide consists of:
-    -   **Layout**: The compositional structure (e.g., "Split Screen", "Hero Shot").
-    -   **Scene**: A detailed, self-contained prompt describing the 3D scene, lighting, and objects. **Crucial**: This prompt must describe `text` as physical objects (e.g., "etched in glass", "floating holographic letters").
-    -   **Asset**: List `imgs/style_matrix_0.jpg` for *every* slide. List other specific assets (logos, screenshots) if needed.
+*   a generic corporate deck
+*   a career-coach motivational deck
+*   a flashy AI demo
+*   a glass-heavy sci-fi concept deck
 
-### Phase 3: Asset Pipeline (The Anchors)
-**Goal**: Collect and inject specific pixels that AI cannot hallucinate (Logos, UI screenshots, specific Diagrams).
-1.  **Identify**: Look at `outline_visual.md`. Which slides need specific "Truth" pixels? (e.g., a Company Logo, a QR code).
-2.  **Guide**: Ask the user to place these files in `imgs/`.
-3.  **Verify**: Ensure the file paths in `outline_visual.md` match the actual files in `imgs/`.
+The core message is:
 
-### Phase 4: Batch Render (The Execution)
-**Goal**: Generate the final slides.
+> It is not just that you find the job. The job also has to find you.
 
-### 3. Generate Slides
+This is a talk about visibility, legibility, signal, profile-market fit, recruiters as market channels, and interviews as market research.
 
-#### Step 1: Rapid Iteration (1K)
-Generate slides at 1K resolution for fast feedback loops.
-```bash
-python tools/generate_slides.py
-```
-This generates `generated_slides/slide_XX_0.png` (1K).
+---
 
-#### Step 2: Final Polish (4K Upscale)
-Once the content and visuals are approved, upscale the images to 4K using the enlarge mode:
-```bash
-python tools/generate_slides.py --enlarge
-```
-This iterates over all `slide_XX_0.png` files, upscales them using the generative model, and saves them as `slide_XX_0_4k.png`.
+## 1. Core Framing
 
-**Note**: Always review the 1K version first to save costs. Upscaling involves re-generation and is expensive.
-The images are saved to `generated_slides/` and automatically linked in `index.html`.
+The audience is primarily:
 
-## Capabilities & Tools
-You have access to the following leverage tools in this repo. Use them or guide the user to use them:
+*   Data Scientists
+*   ML / AI professionals
+*   technical candidates navigating a more opaque hiring market
 
-*   **`tools/gemini_generate_image.py`**:
-    *   **Function**: Generates images using the Nano Banana 2 default model (`gemini-3.1-flash-image-preview`).
-    *   **Features**: Supports text-only prompts OR text + image prompts. Can take multiple input images (e.g., Style Matrix + Logo).
-    *   **Usage**: Used by the batch renderer, but can be used continuously to iterate on the Style Matrix in Phase 1.
+The talk should help them understand:
 
-*   **`tools/generate_slides.py`**:
-    *   **Function**: The Batch Renderer.
-    *   **Features**: Parses `outline_visual.md`. Handles multi-asset injection. Multithreaded.
-    *   **Usage**: Run this when the outline is locked.
+*   why job hunting feels structurally different now
+*   why blind application volume is no longer enough
+*   why visibility and positioning matter
+*   why online presence is part of the matching system
+*   why recruiters are part of market access
+*   why interviews are not only evaluation, but also information gathering
 
-*   **`tools/generate_qr.py`**:
-    *   **Function**: Helper to generate functional QR codes.
-    *   **Usage**: If the user needs a QR code, write/run a script like this (or this exact one) to create the asset.
+The speaker should come across as:
 
-*   **`index.html`**:
-    *   **Function**: The Viewer.
-    *   **Features**: A Reveal.js-based presentation shell.
-    *   **Usage**: It simply displays the images in `generated_slides/`. It also holds the Speaker Notes.
+*   thoughtful
+*   grounded
+*   technically credible
+*   not self-promotional
+*   not selling fantasy
 
-## Interaction Protocol
-When a user asks to create a deck:
-1.  **Check Status**: Do we have a `visual_guideline.md`? Do we have a `style_matrix_0.jpg`?
-2.  **If No**: Start at Phase 1.
-3.  **If Yes**: Proceed to Phase 2 (Outline).
-4.  **Drafting Prompts**: When writing prompts in `outline_visual.md`, be **Holistic**. Don't say "place a logo at x,y". Say "The logo rests physically on the ceramic surface, casting a soft shadow."
-5.  **Review**: Before Rendering, ask the user to review the Outline.
-6.  **Render**: Run the tools.
+---
 
-## Troubleshooting
-*   **"The text is garbled"**: The AI is hallucinating text. **Fix**: Simplify the text in the prompt. Make the text description larger/clearer. Or, decide to render the textless background and overlay HTML text (though we prefer full rendering for this specific aesthetic).
-*   **"The style is inconsistent"**: The `style_matrix_0.jpg` helps, but sometimes isn't enough. **Fix**: Strengthen the prompt description of the "container" or "environment".
-*   **"The QR Code doesn't work"**: The AI hallucinated it. **Fix**: Ensure `imgs/qrcode.png` is being passed as an asset, and the prompt explicitly says "embed this reference image directly".
+## 2. Visual Direction
+
+The deck should visually suggest:
+
+*   signal emerging from noise
+*   one thing being surfaced from a crowded field
+*   strategic clarity
+*   discoverability
+*   professional legibility
+
+The aesthetic target is:
+
+*   Apple keynote discipline
+*   editorial photography hierarchy
+*   premium strategy presentation restraint
+
+Preferred material language:
+
+*   matte ceramic
+*   brushed aluminum
+*   textured paper or card surfaces
+*   soft translucent acrylic as a secondary material
+*   quiet architectural backgrounds
+
+Avoid:
+
+*   cyberpunk
+*   neon
+*   generic stock office scenes
+*   handshake clichés
+*   flat clipart
+*   colorful gradient blobs
+*   frosted-glass-heavy AI aesthetics
+*   cluttered dashboards
+
+Color and light should stay restrained:
+
+*   off-white
+*   warm gray
+*   stone
+*   graphite
+*   silver
+*   muted blue-gray
+*   one subtle cool-blue accent when emphasis is needed
+
+Lighting should communicate being seen:
+
+*   soft daylight
+*   directional illumination
+*   subtle shadow
+*   realistic cinematic contrast
+
+---
+
+## 3. Content Rules
+
+This is a live talk, not a written article.
+
+Slides should:
+
+*   communicate one idea each
+*   be understandable quickly
+*   leave room for the speaker
+*   avoid text overload
+
+Text on slides should be:
+
+*   concise
+*   high-signal
+*   insight-led
+*   cleanly phrased
+
+Avoid:
+
+*   dense paragraphs
+*   inflated business language
+*   empty motivational slogans
+*   generic AI thought-leadership tone
+
+English titles are fine. Chinese supporting language is also fine when it improves clarity for the audience.
+
+If the model cannot reliably render text, prefer a strong text-light background that can support later overlay.
+
+---
+
+## 4. Deck Structure
+
+Build the deck around these six slides:
+
+### Slide 1: Why job hunting feels different now
+
+Core ideas:
+
+*   information asymmetry
+*   a partially broken hiring system
+*   a more unstable and reactive market
+
+### Slide 2: The mindset shift
+
+Core ideas:
+
+*   stop thinking only in terms of applying
+*   start thinking in terms of being visible and discoverable
+*   make yourself legible to the market
+
+### Slide 3: Make yourself findable
+
+Core ideas:
+
+*   online presence is part of the matching system
+*   profile-market fit matters
+*   LinkedIn, GitHub, personal site, portfolio, and public activity all contribute to credibility
+
+### Slide 4: What “Data Scientist” means now
+
+Core ideas:
+
+*   the role is splitting
+*   product / analytics and ML / AI / engineering are different trajectories
+*   positioning requires choosing which version of yourself you are making legible
+
+### Slide 5: Use recruiters well
+
+Core ideas:
+
+*   recruiters are part of the opportunity flow
+*   they function as access channels into the market
+*   networking is about being known, not merely knowing people
+
+### Slide 6: Interview = market research
+
+Core ideas:
+
+*   interviews reveal what the market values
+*   interviews help calibrate your profile-market fit
+*   interview quality also tells you about the team, manager, and fit
+*   job hunting is also a process of clarifying your own priorities
+
+---
+
+## 5. Prompting Guidance
+
+Describe slides as coherent scenes, not as boxes on a page.
+
+Good scene logic includes:
+
+*   one clear focal object
+*   secondary supporting forms
+*   clean negative space
+*   a stable material and lighting logic
+
+Translate concepts into scenes:
+
+*   information asymmetry -> blurred field versus clearly surfaced subject
+*   broken system -> bottleneck, overload, congestion, misalignment
+*   recruiters -> channels, gateways, selective entry points
+*   interviews -> structured exchange, signal extraction, balanced evaluation
+*   priorities -> stability, support, direction, tradeoff
+
+Avoid over-literal prompt writing.
+Avoid cheesy metaphors.
+Avoid mixing too many ideas into one frame.
+
+---
+
+## 6. Asset And Style Anchor Rules
+
+Use the shared style anchor in `imgs/style_matrix_0.png` whenever the outline references it.
+
+This style anchor exists to stabilize:
+
+*   material language
+*   lighting
+*   composition hierarchy
+*   emotional tone
+*   the sense of signal emerging from noise
+
+If a slide requires fidelity for a specific asset such as:
+
+*   screenshot
+*   logo
+*   QR code
+*   UI reference
+
+inject the asset directly instead of asking the model to hallucinate it.
+
+---
+
+## 7. Output Standard
+
+The final deck should feel:
+
+*   polished
+*   coherent
+*   restrained
+*   elevated above a normal job-hunting talk
+*   tailored to this exact audience and message
+
+If tradeoffs are required, prioritize:
+
+1.  clarity
+2.  coherence
+3.  conceptual sharpness
+4.  visual consistency
+5.  polish
+
+Do not sacrifice message clarity for visual spectacle.

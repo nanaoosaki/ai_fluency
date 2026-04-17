@@ -1,131 +1,86 @@
-# Slide Outline: Holistic Generation of Slide Decks Entirely from Nano Banana Pro
-
+# Outline Visual: Make Yourself Findable
 This outline defines the visual scenes for the presentation.
-**Constraint**: All slides must strictly follow the `visual_guideline.md` style (The Glass Garden).
 
-#### Slide 1: Title (The Hook)
-*   **Layout**: Minimalist Spatial Title.
-*   **Scene**:
-    *   **Prompt**: A cinematic, high-end title slide. Center stage features a highly refactive, frosted glass sculpture of a banana, glowing softly from within with a warm, organic light. This glass banana represents the Nano Banana Pro kernel—futuristic yet familiar.
-    *   Floating in 3D space in front of the banana is the title "Holistic Generation of Slide Decks Entirely from Nano Banana Pro" set in a large, elegant, deep grey sans-serif font (like SF Pro Display).
-    *   Below the title, a smaller subtitle "From Collage to Rendering: A New Paradigm" floats with a delicate shadow cast on the background.
-    *   At the bottom of the slide, positioned at approximately 72% from the top, centered horizontally, render the author signature "Yan Wang 🌐 yage.ai" in a subtle, elegant style. The text should be rendered as physical elements—etched lightly into the background surface or floating as semi-transparent glass text in deep grey (rgba(0,0,0,0.5)), matching the overall glass garden aesthetic. Use a refined sans-serif font (like Inter or SF Pro), font size around 1.0em, font weight 300, positioned subtly so it doesn't compete with the main content but remains clearly readable.
-    *   The background is a clean, bright #F5F5F7 with subtle caustics refacting from the glass banana. The overall vibe is premium, Apple-like, and meticulously rendered.
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+**Constraint**: All slides must strictly follow `visual_guideline.md`.  
+**Shared Asset**: Use `imgs/style_matrix_0.png` on every slide as the style anchor if available.  
+**Deck Tone**: Premium editorial, strategic clarity, signal emerging from noise, calm high-end keynote.
 
-#### Slide 2: Context (The Shift)
-*   **Layout**: Split composition (Spatial UI).
-*   **Scene**:
-    *   **Prompt**: A split-screen composition comparing the old vs new paradigms.
-    *   On the **Left**, a large vertical frosted glass panel stands upright. Etched clearly on the glass in deep grey text are three key points:
-        *   "The Problem: Standard slides are fragmented and disjointed."
-        *   "The Goal: Achieve 'Steve Jobs' quality visuals instantly."
-        *   "The Shift: From manual 'Assembling' to holistic 'Rendering'."
-    *   On the **Right**, visualize the transformation: A pile of chaotic, colorful plastic toy bricks (representing the old "assembling" method) is melting and morphing into a perfect, smooth, reflective liquid metal sphere (representing the new "rendering" method). The transition is fluid and dynamic.
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+---
 
-#### Slide 3: The "Old" Way (The Problem)
-*   **Layout**: Skeuomorphic Contrast.
-*   **Scene**:
-    *   **Prompt**: A visual representation of the "Old Way" of making slides. A flat, 2D "sheet of paper" or legacy computer screen floats in the 3D glass environment.
-    *   Inside this screen, show a bad PowerPoint slide: A stark white background, a generic "Current Workflow" title in Arial, and three disjointed, flat vector icons (a Gear, a Person, a Computer) that don't match in style.
-    *   Bullet points on the screen read: "1. Hunt for separate icons", "2. Manually align boxes", "3. Zero visual consistency".
-    *   The screen looks slightly dated or rigid, contrasting with the fluid, beautiful environment around it.
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+## Slide 1: Why job hunting feels different now
+- **Layout**: Editorial triptych / structured contrast
+- **Scene**:
+  - **Prompt**: A premium editorial scene representing three structural shifts in job hunting. The composition contains three zones that feel part of one coherent world, not separate boxes.
+  - Zone 1 visualizes **information asymmetry**: a dense blurred field of abstract cards or markers in soft foggy depth, with only partial visibility.
+  - Zone 2 visualizes a **broken system**: an overloaded sorting or filtering structure where too many nearly identical paper-like profiles are flowing through a bottleneck, creating visual congestion.
+  - Zone 3 visualizes a **changed market environment**: a formerly stable architectural corridor now interrupted by movement, redirection, or broken continuity, suggesting layoffs, instability, and forced mobility.
+  - The overall mood should be analytical, calm, and sharp, not dramatic. One quiet title area should feel easy to overlay later.
+- **Asset**:
+  - imgs/style_matrix_0.png
 
-#### Slide 4: The "New" Way (The Solution)
-*   **Layout**: Organic Spatial Interaction.
-*   **Scene**:
-    *   **Prompt**: A beautiful, organic visualization of the "New Way". The three concepts from the previous slide (Process, People, Computer) are reimagined as three translucent, glowing glass capsules hovering in the air.
-    *   Unlike the rigid icons, these capsules are organically connected by strands of liquid light or fiber optic threads, pulsing with energy. They feel like a single living system rather than separate parts.
-    *   Elegant, floating text labels next to the cluster read: "Holistic Scene Generation" and "Perfect Visual Integrity".
-    *   The lighting is exquisite, with caustic patterns dancing on the floor.
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+---
 
-#### Slide 5: The Reality Check (The Challenge)
-*   **Layout**: Alert State (Red/Orange Tint).
-*   **Scene**:
-    *   **Prompt**: A slide representing "Challenges". A large, sleek glass panel dominates the view, but it is lit with a warning **orange-red** gradient light, signaling alert.
-    *   On the panel, distinct text lists the challenges:
-        *   "1. Entropy: Styles drift randomly between slides."
-        *   "2. Hallucinations: Fake QR codes and garbled text."
-        *   "3. Isolation: No interactivity, just static pixels."
-    *   Surrounding the panel, the background environment shows floating, shattered geometric glass shards, visualizing the concept of "Entropy" or loss of control.
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+## Slide 2: The mindset shift
+- **Layout**: Hero metaphor
+- **Scene**:
+  - **Prompt**: A single striking central metaphor for the idea “It is not just you finding the job; the job also has to find you.” In a calm, premium environment, one clearly illuminated structured card or object is elevated from a larger field of softer, blurred forms. The highlighted subject feels legible, credible, and discoverable.
+  - The image should suggest “being surfaced” and “becoming findable,” not passive waiting. The subject should look intentional, selected, and unmistakably visible.
+  - Keep the scene minimal and memorable, like a keynote hero image.
+- **Asset**:
+  - imgs/style_matrix_0.png
 
-#### Slide 6: The Architecture (The Solution Structure)
-*   **Layout**: Exploded View / Cross-Section.
-*   **Scene**:
-    *   **Prompt**: A high-end visualization of the "Generative Kernel" architecture, composed of three nested layers of materials.
-    *   **Layer 1 (The Core)**: A glowing, fluid orb of pure light and energy. This represents "Probabilistic AI" (the chaos/creativity). It is vibrant but contained.
-    *   **Layer 2 (The Shell)**: A precise, translucent frosted glass sphere encasing the core. This represents "Constraints and SOPs" (the visual guidelines). It shapes and diffuses the raw AI light into soft, beautiful illumination.
-    *   **Layer 3 (The Frame)**: An outer ring or structural frame made of brushed metal or rigid matte ceramic. This represents "Deterministic Code" (the runner/tools). It holds the glass shell firmly in place, providing stability and structure.
-    *   **Composition**: Centered composition, "exploded" slightly to show the nesting relationships. The Uncertainty (Core) is bound safely inside the Certainty (Frame).
-    *   **Text & Labels**: 
-        *   **Title**: Large, elegant text hovering above: "The Architecture".
-        *   **Subtitle**: Smaller text below or next to the sphere: "The Generative Kernel: A Deterministic Container for Probabilistic Creativity."
-        *   **Labels**: Floating glass labels point to each layer: "1. Probabilistic AI", "2. Constraints & SOP", "3. Deterministic Code".
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+---
 
-#### Slide 7: Technique 1 - Visual Anchoring
-*   **Layout**: Reference Board & Input/Output.
-*   **Scene**:
-    *   **Prompt**: Explaining "Visual Anchoring". On the left, a glass card reads: "Technique 1: Visual Anchoring. Don't describe styles. Show them."
-    *   On the right, display the provided **Style Matrix image** floating in space as a holographic reference board.
-    *   Next to it, show a simple wireframe cube (labeled "Input") transforming into a fully rendered, glowing crystal cube (labeled "Output"), showing how the style matrix guides the transformation.
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+## Slide 3: Make yourself findable
+- **Layout**: Structured ecosystem / layered identity scene
+- **Scene**:
+  - **Prompt**: A refined spatial composition showing how online presence creates professional legibility. In the center, a primary profile card or identity object is clearly structured and lit. Surrounding it are supporting signals arranged with calm hierarchy: a portfolio surface, a GitHub-like code artifact, a personal site card, and subtle traces of activity or commentary.
+  - The scene should communicate two layers: first, quick match assessment; second, authentication and credibility. The central object should feel like the “profile,” while the supporting objects prove this person is real, active, and relevant.
+  - Avoid literal LinkedIn screenshots. This should feel symbolic, clean, and strategic.
+- **Asset**:
+  - imgs/style_matrix_0.png
 
-#### Slide 8: Technique 2 - Asset Injection
-*   **Layout**: Organic Integration Close-up.
-*   **Scene**:
-    *   **Prompt**: A stunning close-up demonstrating "Asset Injection". The core subject is a **matte white ceramic** square tile containing the QR Code, embedded within a larger block of **translucent frosted glass**.
-    *   **Angle & Lighting**: The composition is framed at a **slight angle** (approx 15 degrees) to show the depth and refraction of the glass edges, but the central ceramic tile is properly aligned to remain scannable. The lighting is soft and diffused, ensuring **no reflections** on the matte QR code itself, while allowing the glass surroundings to glow.
-    *   Embedded into the matte center is the **QR Code**. It looks like a high-contrast ink print or matte dark stone inlay. It is strictly black and white.
-    *   **CRITICAL NEGATIVE PROMPT**: Do NOT generate any text, titles, or diagrams from the style matrix. The 'style matrix' asset is for **material and lighting reference only**. Do not render it. The ONLY text is the label and caption below.
-    *   A floating glass label nearby reads: "Technique 2: Asset Injection".
-    *   Caption etched into the glass surface below: "Context Curation: Inject raw pixels, render the lighting and texture."
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
-    *   imgs/qrcode.png
+---
 
-#### Slide 9: Technique 3 - Delayed Rendering
-*   **Layout**: Timeline / Production Line.
-*   **Scene**:
-    *   **Prompt**: Visualizing "Delayed Rendering". A linear process flowing from left to right.
-    *   Step 1: A stack of digital papers with Markdown text (labeled "Content Logic").
-    *   Step 2: A heavy, secure padlock (labeled "Lock-down").
-    *   Step 3: A glowing, futuristic engine block or rendering prism (labeled "Batch Render").
-    *   Step 4: A stream of perfect beautiful slides coming out of the prism.
-    *   Text below: "Optimization: Lock content first. Render once at the very end."
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+## Slide 4: What “Data Scientist” means now
+- **Layout**: Diverging pathways / two-lane future
+- **Scene**:
+  - **Prompt**: A sophisticated visual showing the Data Scientist role splitting into two credible trajectories. One path leads toward product / analytics: structured research materials, experiment logic, business insight, stakeholder clarity. The other path leads toward ML / AI / engineering: production systems, monitoring, deployment, infrastructure-like order, stronger technical build surfaces.
+  - The two paths should emerge from one common base and diverge clearly, but both should look valuable and legitimate. The engineering side should feel more system-oriented; the analytics side should feel more interpretive and decision-oriented.
+  - The scene should help the audience feel the market’s directional pull without becoming a literal diagram.
+- **Asset**:
+  - imgs/style_matrix_0.png
 
-#### Slide 10: Methodology (User Generated Software)
-*   **Layout**: Deconstructed Toolkit.
-*   **Scene**:
-    *   **Prompt**: A clean, white laboratory workbench showing the "Generative Kernel Kit".
-    *   The kit consists of three distinct, high-tech components laid out neatly:
-        *   1. **Core Kit**: A structural metal chassis (representing the Code Skeleton).
-        *   2. **Guiding Knowledge**: A glowing holographic manual or data crystal (representing AI Instructions/SOP).
-        *   3. **Leverage Tools**: A set of precision lenses or instruments (representing the Asset Pipeline).
-    *   Label text: "The Methodology: delivering User Generated Software potential."
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+---
 
-#### Slide 11: The Philosophy (Beyond DRY)
-*   **Layout**: Concept Comparison.
-*   **Scene**:
-    *   **Prompt**: A philosophical comparison slide.
-    *   On the **Left**: A standard, mass-produced grey plastic chair, looking boring and rigid. Label: "The Product (Static)".
-    *   On the **Right**: A mesmerizing, self-assembling structure made of small, intelligent modules, forming a unique shape. It looks alive and capable of becoming anything. Label: "The Generative Potential".
-    *   Center text: "Beyond DRY (Don't Repeat Yourself). Moving from Static Deliverables to Generative Systems."
-    *   Subtext: "Intention Fidelity | Expression Range | User Efficiency"
-*   **Asset**: 
-    *   imgs/style_matrix_0.jpg
+## Slide 5: Use recruiters well
+- **Layout**: Channel / gateway composition
+- **Scene**:
+  - **Prompt**: A visual metaphor for recruiters as channels into the market. Show a refined environment where multiple paths or entry points exist, but one or two curated gateways create real access. The mood should suggest that the recruiter is not the whole market, but an important channel into opportunity flow.
+  - The composition should also imply strategy: not blind volume, but targeted connection. It should feel like entering the right stream, not shouting into a crowd.
+  - Keep the scene human enough to feel relational, but avoid stock-photo business scenes.
+- **Asset**:
+  - imgs/style_matrix_0.png
+
+---
+
+## Slide 6: Interview = market research
+- **Layout**: Conversational structure / signal extraction
+- **Scene**:
+  - **Prompt**: A calm, intelligent scene that represents interview as information exchange and signal gathering. Instead of a hostile test, render a structured encounter where information is being surfaced, clarified, and evaluated. The composition should suggest dialogue, interpretation, and signal extraction.
+  - One layer of the scene should imply that the candidate is being assessed; another should imply that the team, manager, and role are also being evaluated. The environment should feel balanced, not punitive.
+  - The final mood should support the closing idea that job hunting is also a process of learning your priorities, fit, and professional direction.
+- **Asset**:
+  - imgs/style_matrix_0.png
+
+---
+
+## Slide 7: Takeaways
+- **Layout**: Closing summary / three-principles composition
+- **Scene**:
+  - **Prompt**: A premium editorial closing slide that distills the talk into a calm, memorable summary. The composition should feel conclusive, distilled, and highly legible. Use a refined spatial arrangement with one clear summary card or anchor form in the center, supported by three surrounding principle markers or bands that feel structurally connected rather than list-like.
+  - The core visual idea is reducing information asymmetry until the right match becomes visible. Show a noisy field resolving into a clean visible alignment, or three signal paths converging toward a coherent match point. The scene should feel resolved, confident, and quietly strategic.
+  - Allow space for takeaway text to be overlaid later if needed. Do not overload the image with dense rendered text.
+  - The closing mood should feel like clarity after ambiguity: selective illumination, reduced noise, stronger fit, and a visible path between candidate and opportunity.
+- **Asset**:
+  - imgs/style_matrix_0.png

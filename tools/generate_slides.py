@@ -4,29 +4,39 @@ import os
 import re
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
-import time
+
+# Ensure the project root is importable even when this script is launched directly.
+script_dir = Path(__file__).resolve().parent
+project_root = script_dir.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
 
 if __package__:
     from . import gemini_generate_image
 else:
     from tools import gemini_generate_image
 
-def parse_slides(outline_path, start_slide=1, end_slide=19, specific_slides=None):
-    with open(outline_path, 'r') as f:
+def parse_slides(outline_path, start_slide=1, end_slide=None, specific_slides=None):
+    with open(outline_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
     slides = []
-    # Regex to find slide blocks
-    slide_pattern = re.compile(r'#### Slide (\d+):(.*?)(?=#### Slide \d+:|$)', re.DOTALL)
+    # Support either "## Slide N:" or "#### Slide N:" style headings.
+    slide_pattern = re.compile(
+        r'^(#{2,4})\s+Slide\s+(\d+):(.*?)(?=^#{2,4}\s+Slide\s+\d+:|\Z)',
+        re.DOTALL | re.MULTILINE
+    )
     
     matches = slide_pattern.finditer(content)
     for match in matches:
-        slide_num = int(match.group(1))
+        slide_num = int(match.group(2))
         
         # Check constraints
         if specific_slides and slide_num not in specific_slides:
             continue
-        if not specific_slides and not (start_slide <= slide_num <= end_slide):
+        if not specific_slides and slide_num < start_slide:
+            continue
+        if not specific_slides and end_slide is not None and slide_num > end_slide:
             continue
             
         slide_content = match.group(0).strip()
@@ -36,7 +46,7 @@ def parse_slides(outline_path, start_slide=1, end_slide=19, specific_slides=None
         
         # Find the Asset section
         # matches * **Asset**: or * **Asset:** or * **Asset** :
-        asset_header_match = re.search(r'\*\s+\*\*Asset\*\*?\s*:?', slide_content)
+        asset_header_match = re.search(r'[-*]\s+\*\*Asset\*\*?\s*:?', slide_content)
         
         if asset_header_match:
             # Get the text following the header
@@ -57,7 +67,7 @@ def parse_slides(outline_path, start_slide=1, end_slide=19, specific_slides=None
                     continue
                     
                 # Stop if we hit a new major section (indicated by * **Key**:)
-                if re.match(r'^\*\s+\*\*', stripped) and not stripped.startswith('* **Asset'):
+                if re.match(r'^[-*]\s+\*\*', stripped) and not re.match(r'^[-*]\s+\*\*Asset', stripped):
                         break
                 
                 # Check for list items
@@ -125,10 +135,11 @@ def main():
     parser = argparse.ArgumentParser(description="Generate slides")
     parser.add_argument("--enlarge", action="store_true", help="Enlarge existing slides to 4K")
     parser.add_argument("--slides", type=int, nargs="+", help="Specific slide numbers to process (e.g., --slides 8 11)")
+    parser.add_argument("--workers", type=int, default=1, help="Number of parallel slide generations (default: 1)")
     args = parser.parse_args()
 
     # Get project root directory (parent of tools directory)
-    script_dir = Path(__file__).parent
+    script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent
     
     outline_path = project_root / "outline_visual.md"
@@ -192,7 +203,7 @@ def main():
         print("Batch enlargement complete.")
         return
 
-    with open(guideline_path, 'r') as f:
+    with open(guideline_path, 'r', encoding='utf-8') as f:
         guideline = f.read()
         
     # Generate mode
@@ -206,13 +217,14 @@ def main():
     
     if not specific_slides:
         # Fallback to generating ALL if not specified (restoring full functionality)
-        slides = parse_slides(str(outline_path), 1, 19)
+        slides = parse_slides(str(outline_path), 1, None)
     else:
         slides = parse_slides(str(outline_path), specific_slides=specific_slides) 
     
     print(f"Found {len(slides)} slides to generate.")
     
-    with ThreadPoolExecutor(max_workers=4) as executor: 
+    max_workers = max(1, args.workers)
+    with ThreadPoolExecutor(max_workers=max_workers) as executor: 
         futures = [
             executor.submit(generate_slide, slide, guideline, output_dir, project_root)
             for slide in slides
