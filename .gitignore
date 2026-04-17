@@ -42,11 +42,8 @@ env/
 Thumbs.db
 
 # Generated files
-generated_slides/
-*.jpg
-*.jpeg
-*.png
-*.webp
+# Track deck assets and rendered slides in this repo.
+# Add more specific ignore rules later if you want to exclude only scratch outputs.
 
 # Database
 *.db
@@ -60,4 +57,3 @@ generated_slides/
 *.tmp
 *.temp
 
-generated_slides/
