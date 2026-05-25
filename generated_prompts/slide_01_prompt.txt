@@ -1,3 +1,12 @@
+You are generating one complete 16:9 slide for a live HTML5 presentation.
+
+NON-NEGOTIABLE OUTPUT CONTRACT:
+- Render a full finished slide image, including the supplied exact text.
+- Preserve the exact wording, spelling, punctuation, capitalization, and filename syntax.
+- Do not add any words, labels, logos, watermarks, or pseudo-text beyond the supplied copy.
+- Prioritize large, projection-readable typography over decorative detail.
+
+VISUAL GUIDELINE:
 # Visual Guideline: A Maintained Working Surface
 
 ## Current Mode
@@ -71,3 +80,46 @@ For every generated slide:
 - Slide 5: three-stage file-tree evolution infographic.
 - Slide 6: documentation artifact composition with concise exact prompt and grounded response.
 - Slide 7: typographic closing instruction with a restrained loop motif.
+
+
+SLIDE VISUAL BRIEF:
+# Slide 01 Generation Prompt: Beyond Prompting
+
+## Purpose
+
+Opening cover slide for a ten-minute talk on documentation-driven AI collaboration.
+
+## Exact Text To Render
+
+Render exactly this text, with correct spelling and punctuation, and no additional words:
+
+```text
+AI FLUENCY / CONTEXT SYSTEMS
+
+Beyond
+Prompting
+
+Building a context system that lets AI work with you
+
+CORE THESIS
+A model gives capability.
+A maintained context system makes it iterative, reviewable, and reusable.
+```
+
+## Visual Direction
+
+Create a refined 16:9 editorial keynote cover. Warm paper background, graphite typography, one muted forest-green emphasis on the word `Prompting`, and a quiet documentation-workbench atmosphere: faint blank paper edges and an organized thread or annotation trace in the negative space. The typography is the dominant visual object.
+
+## Layout
+
+- Small uppercase kicker at upper left.
+- Monumental two-line title aligned left in the upper-middle area.
+- Subtitle beneath title.
+- Thesis sentence anchored near the lower left across one or two lines.
+- Keep a large field of quiet negative space.
+
+## Requirements
+
+- Full final presentation slide, not a background.
+- Accurate, highly legible English typography suitable for projection.
+- No logos, watermarks, fake UI, extra labels, or illegible pseudo-text.

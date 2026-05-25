@@ -1,4 +1,5 @@
 livereload==2.7.1
 tornado==6.5.2
-google-genai>=1.54.0
+# OpenAI GPT Image rendering adapter.
+openai>=1.0.0
 python-dotenv>=1.0.0

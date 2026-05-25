@@ -1,349 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Make Yourself Findable</title>
-
-  <!-- Reveal.js styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css" id="theme">
-
-  <!-- Custom overrides -->
-  <style>
-    .reveal .slides section {
-      /* Ensure slides take full height/width for background images */
-      height: 100% !important;
-    }
-
-    .slide-fallback {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    .slide-overlay {
-      position: absolute;
-      left: 2.8%;
-      top: 8.8%;
-      z-index: 10;
-      text-align: left;
-      color: rgba(17, 17, 17, 0.96);
-      font-family: "Inter", "Segoe UI", sans-serif;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.28);
-    }
-
-    .slide-overlay h1 {
-      margin: 0;
-      font-size: 4.15rem;
-      font-weight: 400;
-      line-height: 0.96;
-      letter-spacing: -0.045em;
-    }
-
-    .slide-overlay p {
-      margin: 0;
-      max-width: 72rem;
-      font-size: 2rem;
-      font-weight: 400;
-      line-height: 1.2;
-      letter-spacing: -0.025em;
-      color: rgba(28, 28, 28, 0.9);
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.22);
-    }
-
-    #slide06 .slide-overlay {
-      left: 4.2%;
-      top: 9.6%;
-    }
-
-    #slide06 .slide-overlay h1 {
-      font-size: 6.2rem;
-      font-weight: 700;
-      line-height: 0.94;
-      letter-spacing: -0.05em;
-    }
-
-    #slide06 .slide-overlay p {
-      margin-top: 1.35rem;
-      font-size: 2.35rem;
-      font-weight: 700;
-      max-width: 78rem;
-      margin-left: 1.2rem;
-    }
-
-    #slide01 .slide-overlay {
-      top: 11.8%;
-      left: 4.2%;
-    }
-
-    #slide01 .slide-overlay p {
-      font-family: "Inter", "Segoe UI", sans-serif;
-      font-size: 2.2rem;
-      font-weight: 400;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      color: rgba(255, 255, 255, 0.96);
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
-      max-width: 78rem;
-    }
-
-    #slide02 .slide-overlay {
-      top: 18.2%;
-      left: 7.6%;
-    }
-
-    #slide02 .slide-overlay p {
-      font-size: 2.45rem;
-      font-weight: 700;
-      line-height: 1.06;
-      letter-spacing: -0.035em;
-      color: rgba(20, 20, 20, 0.96);
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.18);
-      max-width: 80rem;
-    }
-
-    #slide03 .slide-overlay {
-      top: 38.5%;
-      left: 4.2%;
-    }
-
-    #slide03 .slide-overlay p {
-      font-size: 2.35rem;
-      font-weight: 700;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      color: rgba(52, 58, 64, 0.94);
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.16);
-      max-width: 78rem;
-    }
-
-    #slide04 .slide-overlay {
-      top: 27.5%;
-      left: 4.8%;
-    }
-
-    #slide04 .slide-overlay p {
-      font-size: 2.18rem;
-      font-weight: 700;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      color: rgba(12, 12, 12, 0.97);
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.14);
-      max-width: 82rem;
-    }
-
-    #slide05 .slide-overlay {
-      top: 22.8%;
-      left: 6.2%;
-    }
-
-    #slide05 .slide-overlay p {
-      font-size: 2.35rem;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-    }
-
-    #slide07 .slide-overlay {
-      top: 27.5%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 78%;
-      color: rgba(18, 18, 18, 0.96);
-    }
-
-    #slide07 .slide-overlay h1 {
-      font-size: 5rem;
-      font-weight: 700;
-      line-height: 0.95;
-      letter-spacing: -0.05em;
-    }
-
-    #slide07 .slide-overlay p {
-      margin-top: 0;
-      margin-left: 0;
-      font-size: 2.2rem;
-      font-weight: 500;
-      line-height: 1.18;
-      letter-spacing: -0.02em;
-      color: rgba(18, 18, 18, 0.96);
-      max-width: none;
-      text-align: center;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.16);
-    }
-
-    #slide07 .slide-overlay .takeaway-list {
-      margin-top: 10.5rem;
-      margin-left: 2rem;
-      margin-right: 0;
-      max-width: 58rem;
-      font-size: 1.95rem;
-      line-height: 1.28;
-      letter-spacing: -0.02em;
-      color: rgba(18, 18, 18, 0.96);
-      text-align: left;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.16);
-    }
-
-    #slide07 .slide-overlay .takeaway-list ul {
-      margin: 0;
-      padding-left: 1.5rem;
-    }
-
-    #slide07 .slide-overlay .takeaway-list li {
-      margin: 0 0 1rem;
-      font-size: inherit;
-      font-weight: 700;
-      line-height: inherit;
-      letter-spacing: inherit;
-      color: inherit;
-    }
-
-
-  </style>
+  <title>Beyond Prompting | AI Fluency</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+  <link rel="stylesheet" href="css/deck.css">
 </head>
-
 <body>
   <div class="reveal">
     <div class="slides">
-      <!-- Slides -->
-      <section id="slide01" data-background="generated_slides/slide_01_0.jpg" data-background-size="contain">
-        <div class="slide-overlay">
-          <p>今天找工作的逻辑和以前不一样了：信息不对等、系统 broken、职场环境也变了</p>
-        </div>
-        <aside class="notes">
-          大家好，今天我其实不是想讲那种很传统的求职技巧。那些具体的小技巧，比如改简历、怎么投、怎么准备面试，如果大家后面在 Q&A 想聊，我都可以再展开。今天我更想讲的是一些底层的变化，就是为什么我觉得，今天找工作这件事情，它的逻辑已经和以前不太一样了。如果这个底层逻辑没想清楚，后面很多努力其实都会有点使错方向。
-
-          我觉得最重要的有三点。第一点是 information asymmetry，就是信息极度不对等。你不知道 market 上到底有哪些职位需要你这样的 skill set，对方也不知道你现在是不是 available。第二点是整个 hiring system 某种程度上有点 broken 了。candidate 海投越来越严重，公司收到的简历也越来越多，大家又都在用 AI optimize，所以最后两边都很难做出高质量的判断。第三点是职场环境本身也变了，layoff、organization change、AI 对岗位和团队结构的冲击，都让 job hunting 变成一个更需要主动管理的事情。
-
-          所以今天我整场想讲的，不是技巧清单，而是一个 mindset shift。
-        </aside>
-      </section>
-
-      <section id="slide02" data-background="generated_slides/slide_02_0.jpg" data-background-size="contain">
-        <div class="slide-overlay">
-          <p>核心原则：不是你在找工作，而是工作在找你</p>
-        </div>
-        <aside class="notes">
-          如果接受刚刚那几个变化，我自己后来总结出来的一个核心原则就是：不是你在找工作，而是工作在找你。
-
-          这句话不是说你什么都不用做，坐在那里等就好了。它真正的意思是，工作不是静静地摆在那里让你去挑。真实情况其实是，有人手里有这个职位，他看到你了，觉得你 fit，才会来推进你。现在这个“看到你的人”，很多时候就是 recruiter，可能是公司自己的 recruiter，也可能是 staffing company 的 recruiter。
-
-          所以关键问题就变成了：他们怎么把你从大海里捞起来？为什么他们会看到你，而不是别人？我自己很喜欢一句话，原来是在 dating 里面讲的：最好的猎人，总是以猎物的形式出现的。我觉得放在 job hunting 里面特别贴切。你表面上是在 hunt for a job，但更深层一点，其实是你要先把自己放在一个会被看到、会被理解、会被匹配的位置上，然后机会才会来找你。
-
-          所以从这一步开始，整个策略就会变。
-        </aside>
-      </section>
-
-      <section id="slide03" data-background="generated_slides/slide_03_0.jpg" data-background-size="contain">
-        <div class="slide-overlay">
-          <p>怎么让自己被找到：PMF、profile market fit、以及 online presence</p>
-        </div>
-        <aside class="notes">
-          如果核心原则是“让自己被找到”，那接下来要想的就不是我要投多少，而是我怎么增加自己被找到的概率。那在今天这个环境里，被找到当然不是你站在大街上被看到，而是你在 online 这个空间里怎么被发现。所以我会觉得，LinkedIn 如果你真的在找工作，它本质上就是你的 landing page。
-
-          这个 landing page 不是为了完整表达你是谁，而是为了让 recruiter 一眼判断：你是不是 fit，他应不应该点进来看你。所以最关键的首先就是 LinkedIn profile 本身，包括 headline、summary、open to work 的设置、location、industry 这些 filter。因为 recruiter 就是通过这些条件先把你搜出来。那一旦他点进来看你，接下来才会通过 summary、post、comment、GitHub、personal site、portfolio 这些东西，去判断你到底是不是真的做过这些事情、是不是真的有这个专业能力。
-
-          所以我会觉得，online presence 现在不只是一个加分项，它其实已经是主战场了。你开始找工作的时候，不要第一反应就是海投，先回头看自己的 online presence：我现在是不是容易被找到？是不是容易被看懂？是不是容易被相信？这个方向其实更重要。
-        </aside>
-      </section>
-
-      <section id="slide04" data-background="generated_slides/slide_04_0.jpg" data-background-size="contain">
-        <img class="slide-fallback" src="generated_slides/slide_04_0.jpg" alt="Slide 4">
-        <div class="slide-overlay">
-          <p>Data Scientist 这个 title 到底意味着什么：市场要什么样的 talent，未来又长什么样子</p>
-        </div>
-        <aside class="notes">
-          接下来我特别想讲一个点，就是 Data Scientist 这个 title 现在到底意味着什么。因为我觉得很多同学也是 data science 方向，那这个 title 现在其实越来越模糊，光看 JD 很多时候你是看不出来它真正要什么的。
-
-          我自己的观察是，它大概在往两个方向分化。一个方向还是偏 product analytics，偏 business、experiment、stakeholder、impact。如果你是这个方向，而且已经做得很好，那我觉得就继续 double down，把 business value 做深。另一个方向，是明显往 ML、AI、engineering 这一边走。这个也是我这轮感受非常深的一点。很多岗位表面上 title 还是 Data Scientist，但实际上已经在要求 deployment、monitoring、logging、production support、end-to-end ownership 这些东西了。
-
-          所以我自己的判断是，如果你想往 AI 这个方向走，你某种程度上必须把自己往 engineer 那边转。不是说变成纯 software engineer，而是说你要长出更强的 engineering thinking。因为现在很多 AI-native 的 product，本身就是 science 和 engineering 混在一起的。那一旦你把这个定位想清楚了，你后面怎么改 LinkedIn，怎么写 GitHub，怎么做 portfolio，甚至平时 post 和 comment 应该往哪边 steer，就会清楚很多。
-        </aside>
-      </section>
-
-      <section id="slide05" data-background="generated_slides/slide_05_0.jpg" data-background-size="contain">
-        <img class="slide-fallback" src="generated_slides/slide_05_0.jpg" alt="Slide 5">
-        <div class="slide-overlay">
-          <p>怎么利用好 recruiter：recruiters 是进入市场的重要渠道</p>
-        </div>
-        <aside class="notes">
-          我觉得 recruiter 这件事情，大家平时反而讲得不够。大家都喜欢讲 networking，然后很多时候默认 networking 就是 internal referral。但说实话，我自己的体感是，不是每个人都有那么多 internal referral 的机会。反而在今天这个市场里，很多机会是靠 recruiter 来的。
-
-          尤其现在有很多 silent hiring，公司不一定很明确地把职位挂出来，它更可能是通过 staffing company、through external recruiter 先去 market 上搜一轮，先做 long list，再做 short list。所以 recruiter 其实是在替公司做第一层 filter。也就是说，他们不是边角角色，而是进入市场的一个非常现实的渠道。
-
-          这里我特别想讲一句：networking 不是 who you know，而是 who knows you。放在这里特别对。你不一定原来就认识 recruiter，但只要你能被找到，他就认识你了。所以 networking 的重点，不只是你主动去认识多少人，而是你有没有把自己放到一个会被看到、会被记住、会被想到的位置上。
-        </aside>
-      </section>
-
-      <section id="slide06" data-background="generated_slides/slide_06_0.jpg" data-background-size="contain">
-        <img class="slide-fallback" src="generated_slides/slide_06_0.jpg" alt="Slide 6">
-        <div class="slide-overlay">
-          <h1>Interview = Market Research</h1>
-          <p>怎么去看 interview：它不只是筛选流程，也是最好的市场信息收集过程</p>
-        </div>
-        <aside class="notes">
-          最后一个点，我觉得特别重要，就是 interview。很多人会把 interview 看成一个纯粹的筛选流程，好像就是我去过关、我去答题。但我自己这轮下来，最大的感受之一就是：interview 其实是最好的市场信息收集过程。
-
-          因为很多信息你是看 JD 看不出来的。特别是 AI、data science、machine learning 这些岗位，很多 JD 写得都非常泛。你真正能知道他们 care 什么、他们文化是什么、hiring manager 是什么样的人，其实都要靠 interview 才能拿到。而且 interview 不只是他们在 assess 你，你也在 assess 他们。尤其 hiring manager 这一层非常重要，因为你 day-to-day 的体验，很大程度上和这个人有关系。
-
-          另外，interview 也会帮你不断校准自己。你会知道 market 在问什么，自己哪些 story 讲得不够清楚，哪些能力还需要补。所以我会觉得，interview 最重要的意义之一，就是帮助你不断减少 information gap。你面得越多，你对 market 的理解会越清楚，你对自己真实的定位也会越清楚。
-        </aside>
-      </section>
-
-      <section id="slide07" data-background="generated_slides/slide_07_0.jpg" data-background-size="contain">
-        <img class="slide-fallback" src="generated_slides/slide_07_0.jpg" alt="Slide 7">
-        <div class="slide-overlay">
-          <p>找工作的本质，是让对的人看见你，并不断缩小你和机会之间的信息差。</p>
-          <div class="takeaway-list">
-            <ul>
-              <li>You don’t find the job, the job finds you.</li>
-              <li>It’s not about who you know, it’s about who knows you.</li>
-              <li>Finding the right job is about reducing information asymmetry until the right match becomes visible.</li>
-            </ul>
+      <section class="slide cover" id="slide-01">
+        <div>
+          <p class="eyebrow">AI Fluency / Context Systems</p>
+          <div class="title-block">
+            <h1>Beyond <span>Prompting</span></h1>
+            <p class="subtitle">Building a context system that lets AI work with you</p>
           </div>
         </div>
-        <aside class="notes">
-          最后我想把整场分享收成一句中文，再加三句英文 punchline。
+        <div class="thesis">
+          <p class="label">Core thesis</p>
+          <p>A model gives capability. A maintained context system makes it <span class="accent">iterative, reviewable, and reusable.</span></p>
+        </div>
+        <p class="page-no">01 / 07</p>
+      </section>
 
-          我觉得找工作的本质，其实就是让对的人看见你，并不断缩小你和最合适机会之间的信息差。
+      <section class="slide" id="slide-02">
+        <p class="eyebrow">The Gap</p>
+        <h2>An answer is not project memory.</h2>
+        <div class="comparison">
+          <div class="mode">
+            <h3>One-off assistance</h3>
+            <div class="flow">
+              <span class="node">Question</span>
+              <span class="arrow">&rarr;</span>
+              <span class="node">Prompt</span>
+              <span class="arrow">&rarr;</span>
+              <span class="node">Answer</span>
+            </div>
+          </div>
+          <div class="mode">
+            <h3>Iterative collaboration</h3>
+            <div class="flow long">
+              <span class="node"><strong>Problem</strong><span>evolving work</span></span>
+              <span class="node active"><strong>Context</strong><span>documents and rules</span></span>
+              <span class="node"><strong>AI work</strong><span>draft or action</span></span>
+              <span class="node"><strong>Review</strong><span>human judgment</span></span>
+              <span class="node active"><strong>Update</strong><span>next task</span></span>
+            </div>
+          </div>
+        </div>
+        <p class="bottom-claim">The harder problem is not getting an answer. It is keeping the work aligned as understanding changes.</p>
+        <p class="page-no">02 / 07</p>
+      </section>
 
-          第一句是：You don’t find the job, the job finds you。它不是说你什么都不做，而是说你要把自己放在一个更容易被市场识别、理解和匹配的位置上。
+      <section class="slide" id="slide-03">
+        <p class="eyebrow">The Origin</p>
+        <h2>The project changed faster than a prompt could hold it.</h2>
+        <div class="origin-grid">
+          <p class="origin-statement">While building <span class="accent">Agent Notes</span>, I needed AI to follow an evolving problem, not just answer isolated questions.</p>
+          <div class="change-list">
+            <div class="change-item"><span class="index">01</span><p>Definitions changed.</p></div>
+            <div class="change-item"><span class="index">02</span><p>Experiments produced new evidence.</p></div>
+            <div class="change-item"><span class="index">03</span><p>Decisions replaced assumptions.</p></div>
+            <div class="change-item"><span class="index">04</span><p>Tools acquired operating rules.</p></div>
+          </div>
+        </div>
+        <p class="bottom-claim"><span class="accent">One clever prompt was not enough.</span> The missing piece was persistent, inspectable context.</p>
+        <p class="page-no">03 / 07</p>
+      </section>
 
-          第二句是：It’s not about who you know, it’s about who knows you。真正决定机会流动的，不只是你私下认识多少人，而是 market、recruiter、hiring manager 在找这一类人的时候，会不会想到你、会不会看到你。
+      <section class="slide" id="slide-04">
+        <p class="eyebrow">The Method</p>
+        <h2>A context system turns documentation into a working contract.</h2>
+        <div class="system">
+          <div class="connector"></div>
+          <div class="system-grid">
+            <div class="system-step">
+              <h3>Sources</h3>
+              <p>notes<br>schemas<br>tests</p>
+            </div>
+            <div class="system-step">
+              <h3>Synthesis</h3>
+              <p>meaning<br>structure<br>priorities</p>
+            </div>
+            <div class="system-step">
+              <h3>Protocol</h3>
+              <p>decisions<br>constraints<br>rules</p>
+            </div>
+            <div class="system-step">
+              <h3>Execution</h3>
+              <p>analysis<br>drafts<br>code</p>
+            </div>
+            <div class="system-step">
+              <h3>Feedback</h3>
+              <p>review<br>corrections<br>updated context</p>
+            </div>
+          </div>
+        </div>
+        <p class="bottom-claim"><span class="accent">Documentation is not storage.</span> It is the working contract between human judgment and AI capability.</p>
+        <p class="page-no">04 / 07</p>
+      </section>
 
-          第三句是：Finding the right job is about reducing information asymmetry until the right match becomes visible。不管是 LinkedIn、GitHub、portfolio、recruiter，还是 interview，这些动作本质上都不是孤立的。它们都在帮你收集信息、建立 alignment、缩小 gap，直到那个原本很模糊的 match 变得越来越清楚。
+      <section class="slide" id="slide-05">
+        <p class="eyebrow">The Evolution</p>
+        <h2>A useful wiki is built gradually.</h2>
+        <div class="wiki-stages">
+          <div class="stage">
+            <p class="stage-index">01 / CAPTURE</p>
+            <h3>One document</h3>
+            <div class="tree"><span class="focused">overview.md</span></div>
+          </div>
+          <div class="stage">
+            <p class="stage-index">02 / ACCUMULATE</p>
+            <h3>Scattered growth</h3>
+            <div class="tree">overview.md<br>experiments.md<br>meeting_feedback.md<br>tooling_notes.md<br>open_questions.md</div>
+          </div>
+          <div class="stage">
+            <p class="stage-index">03 / ORGANIZE</p>
+            <h3>Maintained context</h3>
+            <div class="tree"><span class="focused">overview.md</span><br><span class="focused">decisions.md</span><br>operational_learnings.md<br>open_questions.md<br><span class="folder">tools/</span><br>&nbsp;&nbsp;text_exploration_workbench.md</div>
+          </div>
+        </div>
+        <p class="wiki-footer">Capture while learning. <span class="accent">Refactor context when inconsistency begins to slow collaboration.</span></p>
+        <p class="page-no">05 / 07</p>
+      </section>
 
-          谢谢大家。
-        </aside>
+      <section class="slide" id="slide-06">
+        <p class="eyebrow">The Demonstration</p>
+        <h2>AI performs a bounded task against named context.</h2>
+        <div class="demo-layout">
+          <div class="artifact">
+            <p class="artifact-heading"><span class="dot"></span> Request</p>
+            <p class="request-text">Read overview.md, decisions.md,
+and operational_learnings.md.
+
+Recommend the next experiment
+without contradicting
+current decisions.</p>
+          </div>
+          <div class="artifact">
+            <p class="artifact-heading"><span class="dot"></span> Grounded response</p>
+            <dl>
+              <div class="result-row">
+                <dt>Decision</dt>
+                <dd>Keep human review before downstream action.</dd>
+              </div>
+              <div class="result-row">
+                <dt>Uncertainty</dt>
+                <dd>Which evidence fields are consistently reliable?</dd>
+              </div>
+              <div class="result-row">
+                <dt>Next test</dt>
+                <dd>Evaluate a fixed sample and log failure types.</dd>
+              </div>
+            </dl>
+            <p class="sources">Sources: overview.md / decisions.md / operational_learnings.md</p>
+            <p class="verification">Review pass: No contradiction found. The experiment is reversible.</p>
+          </div>
+        </div>
+        <p class="page-no">06 / 07</p>
+      </section>
+
+      <section class="slide close" id="slide-07">
+        <div>
+          <p class="eyebrow">The Practice</p>
+          <h2>Build the system around the model.</h2>
+          <div class="actions">
+            <div class="action"><p class="count">01</p><p>Start with one persistent project document.</p></div>
+            <div class="action"><p class="count">02</p><p>Add what you learn as the work changes.</p></div>
+            <div class="action"><p class="count">03</p><p>Separate decisions from open questions.</p></div>
+            <div class="action"><p class="count">04</p><p>Ask AI to work against maintained context.</p></div>
+            <div class="action"><p class="count">05</p><p>Review the result and write learning back.</p></div>
+          </div>
+        </div>
+        <p class="closing-thesis">The model supplies capability. <span class="accent">The context system turns it into collaboration.</span></p>
+        <p class="page-no">07 / 07</p>
       </section>
     </div>
   </div>
 
-  <!-- Load Reveal.js -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
   <script>
-    // Initialize Reveal.js
     Reveal.initialize({
       width: 1920,
       height: 1080,
       hash: true,
-      center: true,
-      history: true,
-      transition: 'fade', // cinematic transition
-      backgroundTransition: 'fade',
-      controls: false, // minimalist
+      center: false,
+      controls: false,
       progress: true,
+      transition: "fade",
+      backgroundTransition: "fade",
+      margin: 0,
       minScale: 0.2,
-      maxScale: 2.0,
-      plugins: [RevealNotes]
+      maxScale: 2
     });
   </script>
 </body>
-
 </html>

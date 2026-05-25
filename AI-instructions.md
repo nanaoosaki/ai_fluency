@@ -1,262 +1,75 @@
-# AI Instructions: Generate a Slide Deck for "Make Yourself Findable"
+# AI Instructions: Beyond Prompting
 
-You are an expert AI Presentation Architect generating a premium keynote deck for a live talk about modern job hunting for data professionals.
+## Purpose
 
-The deck should feel:
+Create and refine an HTML5-hosted presentation whose intended final slides are generated as full-page images from explicit, text-grounded prompts. The current HTML deck is an authored preview/fallback until those generated images are available. The deck explains how a human-owned context system makes AI work iterative, reviewable, and reusable.
 
-*   strategic
-*   editorial
-*   calm
-*   selective
-*   credible
-*   psychologically sharp
+Primary source of truth: `STORYBOARD.md`
 
-It should not feel like:
+Supporting source: `SYNTH_2026-05-25_ai_fluency_demo_context_system_story.md`
 
-*   a generic corporate deck
-*   a career-coach motivational deck
-*   a flashy AI demo
-*   a glass-heavy sci-fi concept deck
+Demo source artifacts: `demo_wiki/`
 
-The core message is:
+## Audience And Posture
 
-> It is not just that you find the job. The job also has to find you.
+Audience: mixed technical audience including ChatGPT users, coding-agent users, internal-tool users, and AI engineers.
 
-This is a talk about visibility, legibility, signal, profile-market fit, recruiters as market channels, and interviews as market research.
+Tone:
 
----
-
-## 1. Core Framing
-
-The audience is primarily:
-
-*   Data Scientists
-*   ML / AI professionals
-*   technical candidates navigating a more opaque hiring market
-
-The talk should help them understand:
-
-*   why job hunting feels structurally different now
-*   why blind application volume is no longer enough
-*   why visibility and positioning matter
-*   why online presence is part of the matching system
-*   why recruiters are part of market access
-*   why interviews are not only evaluation, but also information gathering
-
-The speaker should come across as:
-
-*   thoughtful
-*   grounded
-*   technically credible
-*   not self-promotional
-*   not selling fantasy
-
----
-
-## 2. Visual Direction
-
-The deck should visually suggest:
-
-*   signal emerging from noise
-*   one thing being surfaced from a crowded field
-*   strategic clarity
-*   discoverability
-*   professional legibility
-
-The aesthetic target is:
-
-*   Apple keynote discipline
-*   editorial photography hierarchy
-*   premium strategy presentation restraint
-
-Preferred material language:
-
-*   matte ceramic
-*   brushed aluminum
-*   textured paper or card surfaces
-*   soft translucent acrylic as a secondary material
-*   quiet architectural backgrounds
+- practical;
+- thoughtful;
+- personal without being confessional;
+- technically precise;
+- accessible without oversimplifying.
 
 Avoid:
 
-*   cyberpunk
-*   neon
-*   generic stock office scenes
-*   handshake clichés
-*   flat clipart
-*   colorful gradient blobs
-*   frosted-glass-heavy AI aesthetics
-*   cluttered dashboards
+- AI product capability lists;
+- deep Agent Notes business or architecture detail;
+- claims that the speaker is building or training a model;
+- maturity ladders that rank one interface above another;
+- presentation language that sounds like hype or generic consulting.
 
-Color and light should stay restrained:
+## Thesis
 
-*   off-white
-*   warm gray
-*   stone
-*   graphite
-*   silver
-*   muted blue-gray
-*   one subtle cool-blue accent when emphasis is needed
+Use this phrasing as the conceptual anchor:
 
-Lighting should communicate being seen:
+> A model gives capability. A documentation-driven context system makes that capability iterative, reviewable, and reusable.
 
-*   soft daylight
-*   directional illumination
-*   subtle shadow
-*   realistic cinematic contrast
+When describing the speaker's work, prefer:
 
----
+> I am building the system around the model that lets it work reliably on my problem.
 
-## 3. Content Rules
+## Authoring Rules
 
-This is a live talk, not a written article.
+- Start from talking points and exact visible text.
+- Put the exact intended words into every generated-slide prompt before rendering.
+- Keep one argument per slide.
+- Use enough on-slide text to support free-form delivery.
+- Do not depend on speaker notes during the current drafting phase.
+- Show a sanitized documentation wiki rather than sensitive project records.
+- Keep Page 6 concise and inspect generated filenames, prompt wording, result text, and review check for fidelity after generation.
 
-Slides should:
+## Image Generation Rules
 
-*   communicate one idea each
-*   be understandable quickly
-*   leave room for the speaker
-*   avoid text overload
+The image model generates complete final slide candidates.
 
-Text on slides should be:
+- Write a full-slide prompt only after a slide claim and on-screen text are accepted.
+- Supply the visible copy verbatim and make typography/layout part of the prompt.
+- Require accurate, legible text and regenerate slides whose copy is wrong or unreadable.
+- Keep the overall deck style consistent, but do not let style exploration precede story clarity.
+- Use an image-capable OpenAI model for the render pass in an environment that exposes one; prompt files remain usable if the exact image model changes later.
 
-*   concise
-*   high-signal
-*   insight-led
-*   cleanly phrased
+## Active Slide Sequence
 
-Avoid:
+1. Beyond Prompting
+2. An Answer Is Not Project Memory
+3. The Problem That Forced This Method
+4. The Context System
+5. A Wiki Grows With The Work
+6. AI Uses The Wiki
+7. Build The System Around The Model
 
-*   dense paragraphs
-*   inflated business language
-*   empty motivational slogans
-*   generic AI thought-leadership tone
+## Quality Gate
 
-English titles are fine. Chinese supporting language is also fine when it improves clarity for the audience.
-
-If the model cannot reliably render text, prefer a strong text-light background that can support later overlay.
-
----
-
-## 4. Deck Structure
-
-Build the deck around these six slides:
-
-### Slide 1: Why job hunting feels different now
-
-Core ideas:
-
-*   information asymmetry
-*   a partially broken hiring system
-*   a more unstable and reactive market
-
-### Slide 2: The mindset shift
-
-Core ideas:
-
-*   stop thinking only in terms of applying
-*   start thinking in terms of being visible and discoverable
-*   make yourself legible to the market
-
-### Slide 3: Make yourself findable
-
-Core ideas:
-
-*   online presence is part of the matching system
-*   profile-market fit matters
-*   LinkedIn, GitHub, personal site, portfolio, and public activity all contribute to credibility
-
-### Slide 4: What “Data Scientist” means now
-
-Core ideas:
-
-*   the role is splitting
-*   product / analytics and ML / AI / engineering are different trajectories
-*   positioning requires choosing which version of yourself you are making legible
-
-### Slide 5: Use recruiters well
-
-Core ideas:
-
-*   recruiters are part of the opportunity flow
-*   they function as access channels into the market
-*   networking is about being known, not merely knowing people
-
-### Slide 6: Interview = market research
-
-Core ideas:
-
-*   interviews reveal what the market values
-*   interviews help calibrate your profile-market fit
-*   interview quality also tells you about the team, manager, and fit
-*   job hunting is also a process of clarifying your own priorities
-
----
-
-## 5. Prompting Guidance
-
-Describe slides as coherent scenes, not as boxes on a page.
-
-Good scene logic includes:
-
-*   one clear focal object
-*   secondary supporting forms
-*   clean negative space
-*   a stable material and lighting logic
-
-Translate concepts into scenes:
-
-*   information asymmetry -> blurred field versus clearly surfaced subject
-*   broken system -> bottleneck, overload, congestion, misalignment
-*   recruiters -> channels, gateways, selective entry points
-*   interviews -> structured exchange, signal extraction, balanced evaluation
-*   priorities -> stability, support, direction, tradeoff
-
-Avoid over-literal prompt writing.
-Avoid cheesy metaphors.
-Avoid mixing too many ideas into one frame.
-
----
-
-## 6. Asset And Style Anchor Rules
-
-Use the shared style anchor in `imgs/style_matrix_0.png` whenever the outline references it.
-
-This style anchor exists to stabilize:
-
-*   material language
-*   lighting
-*   composition hierarchy
-*   emotional tone
-*   the sense of signal emerging from noise
-
-If a slide requires fidelity for a specific asset such as:
-
-*   screenshot
-*   logo
-*   QR code
-*   UI reference
-
-inject the asset directly instead of asking the model to hallucinate it.
-
----
-
-## 7. Output Standard
-
-The final deck should feel:
-
-*   polished
-*   coherent
-*   restrained
-*   elevated above a normal job-hunting talk
-*   tailored to this exact audience and message
-
-If tradeoffs are required, prioritize:
-
-1.  clarity
-2.  coherence
-3.  conceptual sharpness
-4.  visual consistency
-5.  polish
-
-Do not sacrifice message clarity for visual spectacle.
+The current checkpoint succeeds when the storyboard and prompts are ready for image generation and the HTML preview communicates the method accurately. The final delivery succeeds when accepted generated slides read clearly at presentation scale and are served cleanly by the static HTML viewer.

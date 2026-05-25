@@ -1,3 +1,12 @@
+You are generating one complete 16:9 slide for a live HTML5 presentation.
+
+NON-NEGOTIABLE OUTPUT CONTRACT:
+- Render a full finished slide image, including the supplied exact text.
+- Preserve the exact wording, spelling, punctuation, capitalization, and filename syntax.
+- Do not add any words, labels, logos, watermarks, or pseudo-text beyond the supplied copy.
+- Prioritize large, projection-readable typography over decorative detail.
+
+VISUAL GUIDELINE:
 # Visual Guideline: A Maintained Working Surface
 
 ## Current Mode
@@ -71,3 +80,48 @@ For every generated slide:
 - Slide 5: three-stage file-tree evolution infographic.
 - Slide 6: documentation artifact composition with concise exact prompt and grounded response.
 - Slide 7: typographic closing instruction with a restrained loop motif.
+
+
+SLIDE VISUAL BRIEF:
+# Slide 03 Generation Prompt: The Origin
+
+## Purpose
+
+Explain that the Agent Notes project forced the speaker to build persistent context.
+
+## Exact Text To Render
+
+Render exactly this text, with correct spelling and punctuation, and no additional words:
+
+```text
+THE ORIGIN
+
+The project changed faster than a prompt could hold it.
+
+While building Agent Notes, I needed AI to follow an evolving problem,
+not just answer isolated questions.
+
+01  Definitions changed.
+02  Experiments produced new evidence.
+03  Decisions replaced assumptions.
+04  Tools acquired operating rules.
+
+One clever prompt was not enough.
+The missing piece was persistent, inspectable context.
+```
+
+## Visual Direction
+
+Create a sophisticated 16:9 editorial slide. Use a restrained warm-paper canvas with subtle abstract layered document sheets behind the left narrative block and a disciplined numbered list on the right. Emphasize `Agent Notes` and `persistent, inspectable context` in muted forest green.
+
+## Layout
+
+- Kicker and headline at top.
+- Large narrative quotation on the left half.
+- Four numbered signals in a ruled column on the right.
+- Final statement along the bottom.
+
+## Requirements
+
+- Full final slide with accurate, readable type.
+- Do not create fake file text, computer UI, logos, or extra captions.
